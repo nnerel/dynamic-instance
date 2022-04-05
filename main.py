@@ -17,8 +17,7 @@ products = (
 
 
 for idx, data in enumerate(products):
-    _id = idx
+    _id = idx + 1
     name = data[0]
     price = data[1]
-    for i in range(len(products)):
-        globals()[f'obj_{i}'] = Product(_id, name, price)
+    globals()[f'obj_{_id}'] = Product(_id, name, price)
